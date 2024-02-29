@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.infra.codegroup.CodeGroupDao">
+
+	<resultMap id="resultMapObj" type="com.example.demo.infra.codegroup.CodeGroupDto"></resultMap>
+
+    <select id="selectList" resultMap="resultMapObj">
+        SELECT
+            a.seq
+            ,a.codeType
+            ,(select count(aa.seq) from code aa where 1=1 and aa.codeGroup_seq = a.seq) as xseqCount
+            ,a.deleteNy
+            ,a.registration
+            ,a.correction
+         FROM codeGroup a
+        WHERE 1=1
+    </select>
+	  
+</mapper>
