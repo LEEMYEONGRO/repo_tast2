@@ -3,32 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>codeGroupXdmList</title>
+  <title>codeXdmList</title>
 </head>
 <body>
  	<table>
  		<tr>
- 			<td>ch</td>
+ 			<td>체크박스</td>
  			<td>#</td>
- 			<td>deleteNy</td>
- 			<td>seq</td>
+ 			<td>codeGroupseq</td>
 			<td>codeType</td>
-			<td>xseqCount</td>
+			<td>deleteNy</td>
+			<td>seq</td>
+			<td>codeName</td>
 			<td>registration</td>
-			
-			
  		</tr>
 
  		<tr th:if="${!#lists.isEmpty(list)}" th:each="list : ${list}">
 			<td></td>
 			<td></td>
-			<!-- <td th:text="${list.deleteNy}"></td> -->
+			<td th:text="${list.groupseq}"></td>
+			<td th:text="${list.codeType}"> </td>
+			
 			<td th:if="${list.deleteNy eq 0}">N</td>
-			<td th:unless="${list.deleteNy eq 0}">Y</td>	
- 			<td th:text="${list.seq}"></td> 	
- 			<td> <a th:href="@{/codeGroupView(seq=${list.seq},codeType=${list.codeType})}" th:text="${list.codeType}"></a></td>
- 			<!-- <td th:text="${list.codeType}"></td> -->
- 			<td th:text="${list.xseqCount}"></td>
+			<td th:unless="${list.deleteNy eq 0}">Y</td> 			
+ 			<td th:text="${list.seq}"></td>
+ 			<td th:text="${list.codeName}"></td>
  			<th th:text="${#dates.format(list.registration, 'yyyy/MM/dd HH:mm:ss')}"></th>
  		</tr>
  	</table>

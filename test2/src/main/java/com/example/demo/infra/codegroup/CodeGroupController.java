@@ -28,4 +28,14 @@ public class CodeGroupController {
 		return "codeGroupXdmList";
 		
 	}
+	
+	@RequestMapping("codeGroupView")
+	public String codeGroupView(CodeGroupDto dto) {
+		
+		System.out.println("dto.getSeq(): " + dto.getSeq());
+		System.out.println("dto.getCodeType(): " + dto.getCodeType());
+		System.out.println("dto.getDeleteNy(): " + dto.getDeleteNy());
+		
+		return "codeGroupView";
+	}
 }
