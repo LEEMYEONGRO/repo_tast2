@@ -22,4 +22,25 @@ public class CodeGroupService {
 	
 	public List<CodeGroupDto> selectList(){ return dao.selectList();}
 
+	
+	public CodeGroupDto selectOne(CodeGroupDto dto) {
+		 return dao.selectOne(dto);
+		
+	}
+	
+	public int insert(CodeGroupDto dto) {
+		return dao.insert(dto);
+	}
+	
+	public int update(CodeGroupDto dto) {
+		return dao.update(dto);
+	}
+	
+	public int updateDeleteNy(CodeGroupDto dto) {
+		return dao.updateDeleteNy(dto);
+	}
+	
+	public int delete(CodeGroupDto dto) {
+		return dao.delete(dto);
+	}
 }
