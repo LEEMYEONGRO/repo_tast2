@@ -12,4 +12,24 @@ public class CodeService {
 	CodeDao dao;
 	
 	public List<CodeDto> selectList(){return dao.selectList();}
+	
+	public CodeDto selectOne(CodeDto dto) {
+		return dao.selectOne(dto);
+	}
+	
+	public int insert(CodeDto dto) {
+		return dao.insert(dto);
+	}
+	
+	public int update(CodeDto dto) {
+		return dao.update(dto);
+	}
+	
+	public int deleteNyUpdate(CodeDto dto) {
+		return dao.deleteNyUpdate(dto);
+	}
+	
+	public int codeDelete(CodeDto dto) {
+		return dao.codeDelete(dto);
+	}
 }

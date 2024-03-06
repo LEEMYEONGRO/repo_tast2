@@ -11,6 +11,7 @@ public class CodeDto {
 	private Integer deleteNy;
 	private Date registration;
 	private Date correction;
+	private int codeGroup_seq;
 	
 	
 	public String getGroupseq() {
@@ -55,9 +56,11 @@ public class CodeDto {
 	public void setCorrection(Date correction) {
 		this.correction = correction;
 	}
-	
-	
-	
-	
+	public int getCodeGroup_seq() {
+		return codeGroup_seq;
+	}
+	public void setCodeGroup_seq(int codeGroup_seq) {
+		this.codeGroup_seq = codeGroup_seq;
+	}
 	
 }	

@@ -7,6 +7,7 @@
 </head>
 <body>
  	<table>
+ 		<a th:href="@{/codeRegistration}">등록</a>
  		<tr>
  			<td>체크박스</td>
  			<td>#</td>
@@ -22,12 +23,12 @@
 			<td></td>
 			<td></td>
 			<td th:text="${list.groupseq}"></td>
-			<td th:text="${list.codeType}"> </td>
+			<td th:text="${list.codeType}"></td>
 			
 			<td th:if="${list.deleteNy eq 0}">N</td>
 			<td th:unless="${list.deleteNy eq 0}">Y</td> 			
  			<td th:text="${list.seq}"></td>
- 			<td th:text="${list.codeName}"></td>
+ 			<td> <a th:href="@{/codeView(seq=${list.seq},codeName=${list.codeName})}" th:text="${list.codeName}"></a></td>
  			<th th:text="${#dates.format(list.registration, 'yyyy/MM/dd HH:mm:ss')}"></th>
  		</tr>
  	</table>
